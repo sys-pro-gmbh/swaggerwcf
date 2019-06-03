@@ -18,6 +18,10 @@ namespace SwaggerWcf.Support
             {
                 return new TypeFormat(ParameterType.Boolean, null);
             }
+            if (type == typeof(byte[]))
+            {
+                return new TypeFormat(ParameterType.String, "byte[]");
+            }
             if (type == typeof(byte))
             {
                 return new TypeFormat(ParameterType.String, "byte");
